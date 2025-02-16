@@ -1,0 +1,119 @@
+body {
+    color: #212121;
+    background-color: #ffffff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Навигация */
+.logo {
+    color: #000000;
+}
+
+.logo-accent {
+    color: #2196f3;
+}
+
+.site-nav-link {
+    color: currentColor;
+}
+
+/* Контакты в шапке */
+.contacts-link {
+    color: #757575;
+}
+
+.site-nav-link:hover,
+.site-nav-link:focus,
+.contacts-link:hover,
+.contacts-link:focus {
+    color: #2196f3;
+}
+
+/* Секция героя */
+.hero-title {
+    color: #ffffff;
+}
+
+.hero-button {
+    color: #ffffff;
+    background-color: #2196f3;
+}
+
+/* Секция преимуществ  */
+.advantages-text {
+    color: #757575;
+}
+
+/* Секция "Наша команда */
+.team-text {
+    color: #757575;
+}
+
+/* Секция футера */
+footer {
+    background-color: #2f303a;
+}
+
+.logo-footer {
+    color: #ffffff;
+}
+
+.address {
+    color: #ffffff;
+}
+
+.contact-address {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Цвет акцент */
+
+/* color: #2196f3; */
+
+/* Цвет фона секции "Наша команда" */
+/* #F5F4FA */
+
+/* бекграунд секции-героя */
+/* #2F303A */
+
+/* бекграунд секции "Шана команда" */
+/* #F5F4FA */
+
+/* Site nav */
+
+/* В контактах в шапке, секции преимуществ и "наша команда" */
+/* .text-secondary-color {
+    color: #757575;
+} */
+
+/* Цвет контактов в футере (с альфа-каналом) */
+/* .contacts_color {
+    color: rgba(255, 255, 255, 0.6);
+} */
+
+/* Кнопка в герое */
+/* .hero-button {
+    color: #ffffff;
+    background-color: #2196f3;
+} */
+
+/* Стили для визуального скрытия контента */
