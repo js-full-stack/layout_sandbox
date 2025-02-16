@@ -1,16 +1,23 @@
+:root {
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --accent-color: #2196f3;
+    --light-section-bg: #f5f4fa;
+    --dark-section-bg: #2f303a;
+    --white-color: #ffffff;
+}
+
 body {
     color: #212121;
     background-color: #ffffff;
+    letter-spacing: 0.03em;
 }
-
 ul {
     list-style: none;
 }
-
 a {
     text-decoration: none;
 }
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -23,97 +30,148 @@ a {
     border: 0;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+
+.button {
+    width: 216px;
+    height: 50px;
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+/* Общие стили для секций */
+.section-title {
+    font-size: 36px;
+}
+
 /* Навигация */
 .logo {
+    font-size: 26px;
+    font-weight: 700;
     color: #000000;
 }
-
 .logo-accent {
-    color: #2196f3;
+    color: var(--accent-color);
+}
+.site-nav-link, .contacts-link {
+    color: currentColor;
+    letter-spacing: 0.02em;
 }
 
-.site-nav-link {
-    color: currentColor;
+.site-nav-link.current {
+    color: var(--accent-color);
+}
+
+.site-nav-link,
+.contacts-link {
+    font-weight: 500;
 }
 
 /* Контакты в шапке */
 .contacts-link {
-    color: #757575;
+    color: var(--secondary-text-color);
 }
 
 .site-nav-link:hover,
 .site-nav-link:focus,
 .contacts-link:hover,
 .contacts-link:focus {
-    color: #2196f3;
+    color: var(--accent-color);
 }
 
 /* Секция героя */
-.hero-title {
-    color: #ffffff;
+.hero {
+    background-color: var(--dark-section-bg);
 }
-
-.hero-button {
-    color: #ffffff;
-    background-color: #2196f3;
+.hero-title {
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    color: var(--white-color);
 }
 
 /* Секция преимуществ  */
+
+.advantages-subtitle,
 .advantages-text {
-    color: #757575;
+    font-size: 14px;
+}
+
+.advantages-text {
+    color: var(--secondary-text-color);
 }
 
 /* Секция "Наша команда */
-.team-text {
-    color: #757575;
+
+.team {
+    background-color: var(--light-section-bg);
+}
+
+.team-list {
+    display: flex;
+}
+
+.team-item {
+    width: 270px;
+    background-color: var(--white-color);
+}
+
+.team-title,
+.team-descroption {
+    font-size: 16px;
+}
+
+.team-descroption {
+    color: var(--secondary-text-color);
 }
 
 /* Секция футера */
-footer {
-    background-color: #2f303a;
-}
-
-.logo-footer {
-    color: #ffffff;
-}
-
-.address {
-    color: #ffffff;
-}
-
-.contact-address {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* Цвет акцент */
-
-/* color: #2196f3; */
-
-/* Цвет фона секции "Наша команда" */
-/* #F5F4FA */
-
-/* бекграунд секции-героя */
-/* #2F303A */
-
-/* бекграунд секции "Шана команда" */
-/* #F5F4FA */
-
-/* Site nav */
-
-/* В контактах в шапке, секции преимуществ и "наша команда" */
-/* .text-secondary-color {
-    color: #757575;
-} */
-
-/* Цвет контактов в футере (с альфа-каналом) */
+/* !Цвет контактов в футере (с альфа-каналом) */
 /* .contacts_color {
     color: rgba(255, 255, 255, 0.6);
 } */
+.footer {
+    background-color: var(--dark-section-bg);
+}
 
-/* Кнопка в герое */
-/* .hero-button {
-    color: #ffffff;
+.footer > .logo {
+    color: var(--white-color);
+}
+
+.address {
+    color: var(--white-color);
+    font-style: normal;
+    font-size: 14px;
+}
+
+.address.contact {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* !PORTFOLIO */
+/* Фильтр со списком работ */
+.portfolio-button {
+    color: #212121;
+    background-color: #f5f4fa;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+    color: var(--white-color);
     background-color: #2196f3;
-} */
+}
 
-/* Стили для визуального скрытия контента */
+/* Примеры работ */
+
+.examples-subtitle {
+    font-size: 18px;
+    letter-spacing: 0.06em;
+}
+
+.examples-despription {
+    font-size: 16px;
+    color: var(--secondary-text-color);
+}
