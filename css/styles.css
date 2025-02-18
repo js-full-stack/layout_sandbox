@@ -7,17 +7,28 @@
     --white-color: #ffffff;
 }
 
+/* Roboto font-weight: 400, 500, 700, 900 */
+/* Raleway: 700 */
 body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.17;
     color: #212121;
     background-color: #ffffff;
-    letter-spacing: 0.03em;
 }
 ul {
     list-style: none;
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
+
+button {
+    font-family: inherit;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -30,11 +41,17 @@ a {
     border: 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
 }
 
 .button {
+    font-size: 16px;
     width: 216px;
     height: 50px;
     color: var(--white-color);
@@ -49,6 +66,8 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Навигация */
 .logo {
+        font-family: 'Raleway', sans-serif;
+
     font-size: 26px;
     font-weight: 700;
     color: #000000;
@@ -56,7 +75,8 @@ h1,h2,h3,h4,h5,h6 {
 .logo-accent {
     color: var(--accent-color);
 }
-.site-nav-link, .contacts-link {
+.site-nav-link,
+.contacts-link {
     color: currentColor;
     letter-spacing: 0.02em;
 }
@@ -89,18 +109,16 @@ h1,h2,h3,h4,h5,h6 {
 .hero-title {
     font-size: 44px;
     font-weight: 900;
+    line-height: 1.36;
     letter-spacing: 0.06em;
+    text-transform: uppercase;
     color: var(--white-color);
 }
 
 /* Секция преимуществ  */
 
-.advantages-subtitle,
 .advantages-text {
-    font-size: 14px;
-}
-
-.advantages-text {
+    line-height: 1.71;
     color: var(--secondary-text-color);
 }
 
@@ -142,6 +160,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .address {
+    line-height: 1.71;
+}
+
+.address > .address-text {
     color: var(--white-color);
     font-style: normal;
     font-size: 14px;
@@ -154,8 +176,11 @@ h1,h2,h3,h4,h5,h6 {
 /* !PORTFOLIO */
 /* Фильтр со списком работ */
 .portfolio-button {
+    font-size: 16px;
+    line-height: 1.62;
     color: #212121;
     background-color: #f5f4fa;
+    border: none;
 }
 
 .portfolio-button:hover,
@@ -168,10 +193,18 @@ h1,h2,h3,h4,h5,h6 {
 
 .examples-subtitle {
     font-size: 18px;
+    line-height: 2;
     letter-spacing: 0.06em;
 }
 
-.examples-despription {
+.examples-description {
+    display: none;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+.examples-category {
     font-size: 16px;
+    line-height: 1.87;
     color: var(--secondary-text-color);
 }
