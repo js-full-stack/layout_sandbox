@@ -7,26 +7,34 @@
     --white-color: #ffffff;
 }
 
-/* Roboto font-weight: 400, 500, 700, 900 */
-/* Raleway: 700 */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
     line-height: 1.17;
-    color: #212121;
-    background-color: #ffffff;
+    color: var(--primary-text-color);
+    background-color: var(--white-color);
 }
 ul {
     list-style: none;
 }
 a {
     text-decoration: none;
-    color: inherit;
+    color: currentColor;
 }
 
 button {
     font-family: inherit;
+}
+
+.container {
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .visually-hidden {
@@ -61,13 +69,27 @@ h6 {
 
 /* Общие стили для секций */
 .section-title {
+    text-align: center;
     font-size: 36px;
 }
 
 /* Навигация */
-.logo {
-        font-family: 'Raleway', sans-serif;
 
+.site-nav-list {
+    display: flex;
+    align-items: baseline;
+}
+
+.site-nav-list > .item:first-child {
+    margin-right: 93px;
+}
+
+.site-nav-list > .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
     font-size: 26px;
     font-weight: 700;
     color: #000000;
@@ -109,6 +131,7 @@ h6 {
 .hero-title {
     font-size: 44px;
     font-weight: 900;
+    text-align: center;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -177,6 +200,7 @@ h6 {
 /* Фильтр со списком работ */
 .portfolio-button {
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.62;
     color: #212121;
     background-color: #f5f4fa;
