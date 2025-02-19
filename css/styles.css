@@ -17,24 +17,36 @@ body {
 }
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 a {
     text-decoration: none;
     color: currentColor;
 }
 
-button {
-    font-family: inherit;
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+}
+
+img {
+    display: block;
 }
 
 .container {
-    margin: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 1200px;
 }
 
 .visually-hidden {
@@ -49,19 +61,15 @@ button {
     border: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-}
-
 .button {
+    display: inline-block;
+    font-family: inherit;
+    text-align: center;
     font-size: 16px;
-    width: 216px;
+    font-weight: 700;
+    padding: 10px 32px;
     height: 50px;
+    min-width: 216px;
     color: var(--white-color);
     background-color: var(--accent-color);
     border-radius: 4px;
@@ -73,11 +81,30 @@ h6 {
     font-size: 36px;
 }
 
-/* Навигация */
+/* Хедер и Навигация */
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.logo-accent {
+    color: var(--accent-color);
+}
 
 .site-nav-list {
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    margin: 0;
 }
 
 .site-nav-list > .item:first-child {
@@ -88,15 +115,6 @@ h6 {
     margin-right: 50px;
 }
 
-.logo {
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: #000000;
-}
-.logo-accent {
-    color: var(--accent-color);
-}
 .site-nav-link,
 .contacts-link {
     color: currentColor;
@@ -113,6 +131,15 @@ h6 {
 }
 
 /* Контакты в шапке */
+.header-contacts-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts-item:first-child {
+    margin-right: 50px;
+}
+
 .contacts-link {
     color: var(--secondary-text-color);
 }
@@ -127,42 +154,107 @@ h6 {
 /* Секция героя */
 .hero {
     background-color: var(--dark-section-bg);
+    height: 600px;
+    text-align: center;
+    margin-bottom: 94px;
+    /* margin-left: -15px;
+    margin-right: -15px; */
 }
 .hero-title {
     font-size: 44px;
     font-weight: 900;
-    text-align: center;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-color);
+    padding-top: 200px;
+    margin-bottom: 30px;
 }
 
 /* Секция преимуществ  */
 
-.advantages-text {
+.advantages {
+    display: flex;
+    justify-content: center;
+}
+
+.advantages-list {
+    display: flex;
+    margin-bottom: 118px;
+}
+
+.advantages-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.advantages-subtitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Секция "Чем мы занимаемся */
+
+.section > .services-title {
+    margin-bottom: 50px;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 94px;
+}
+
+.services-list > li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.advantages-item > .advantages-text {
     line-height: 1.71;
     color: var(--secondary-text-color);
 }
 
 /* Секция "Наша команда */
 
+.section.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .team {
     background-color: var(--light-section-bg);
 }
 
+.team > .section-title {
+    margin-bottom: 50px;
+}
+
 .team-list {
     display: flex;
+    justify-content: center;
 }
 
 .team-item {
     width: 270px;
+    padding-bottom: 30px;
     background-color: var(--white-color);
+}
+
+.team-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.team-photo {
+    margin-bottom: 30px;
+}
+
+.team-title {
+    margin-bottom: 10px;
 }
 
 .team-title,
 .team-descroption {
     font-size: 16px;
+    text-align: center;
 }
 
 .team-descroption {
@@ -176,10 +268,13 @@ h6 {
 } */
 .footer {
     background-color: var(--dark-section-bg);
+    padding: 60px 0 60px 15px;
 }
 
 .footer > .logo {
+    display: inline-block;
     color: var(--white-color);
+    margin-bottom: 20px;
 }
 
 .address {
@@ -190,6 +285,11 @@ h6 {
     color: var(--white-color);
     font-style: normal;
     font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.footer-contacts-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .address.contact {
