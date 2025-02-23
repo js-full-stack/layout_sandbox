@@ -46,7 +46,17 @@ img {
 .container {
     margin: 0 auto;
     padding: 0 15px;
-    width: 1200px;
+    width: 1170px;
+}
+
+section,
+header,
+footer {
+    outline: 2px solid tomato;
+}
+
+.flexbox {
+    display: flex;
 }
 
 .visually-hidden {
@@ -67,9 +77,10 @@ img {
     text-align: center;
     font-size: 16px;
     font-weight: 700;
-    padding: 10px 32px;
+    border: 1px solid transparent;
+    padding: 10px 24px;
     height: 50px;
-    min-width: 216px;
+    min-width: 200px;
     color: var(--white-color);
     background-color: var(--accent-color);
     border-radius: 4px;
@@ -86,8 +97,8 @@ img {
 .header {
     display: flex;
     align-items: center;
-    margin-top: 24px;
-    margin-bottom: 25px;
+    justify-content: space-between;
+    padding: 32px 15px;
 }
 
 .logo {
@@ -107,12 +118,12 @@ img {
     margin: 0;
 }
 
-.site-nav-list > .item:first-child {
-    margin-right: 93px;
-}
-
 .site-nav-list > .item:not(:last-child) {
     margin-right: 50px;
+}
+
+.site-nav-list > .item:first-child {
+    margin-right: 93px;
 }
 
 .site-nav-link,
@@ -131,10 +142,6 @@ img {
 }
 
 /* Контакты в шапке */
-.header-contacts-list {
-    display: flex;
-    margin-left: auto;
-}
 
 .contacts-item:first-child {
     margin-right: 50px;
@@ -175,21 +182,21 @@ img {
 
 .advantages {
     display: flex;
-    justify-content: center;
+    margin-bottom: 118px;
 }
 
 .advantages-list {
     display: flex;
-    margin-bottom: 118px;
-}
-
-.advantages-item:not(:last-child) {
-    margin-right: 30px;
+    column-gap: 30px;
 }
 
 .advantages-subtitle {
     font-size: 14px;
     margin-bottom: 10px;
+}
+
+.advantages-item {
+    width: calc(100% / 4);
 }
 
 /* Секция "Чем мы занимаемся */
@@ -200,12 +207,9 @@ img {
 
 .services-list {
     display: flex;
+    column-gap: 30px;
     justify-content: center;
     margin-bottom: 94px;
-}
-
-.services-list > li:not(:last-child) {
-    margin-right: 30px;
 }
 
 .advantages-item > .advantages-text {
@@ -214,7 +218,6 @@ img {
 }
 
 /* Секция "Наша команда */
-
 .section.team {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -230,17 +233,13 @@ img {
 
 .team-list {
     display: flex;
+    column-gap: 30px;
     justify-content: center;
 }
 
 .team-item {
-    width: 270px;
     padding-bottom: 30px;
     background-color: var(--white-color);
-}
-
-.team-item:not(:last-child) {
-    margin-right: 30px;
 }
 
 .team-photo {
@@ -298,13 +297,31 @@ img {
 
 /* !PORTFOLIO */
 /* Фильтр со списком работ */
+
+.portfolio {
+    margin: 94px auto;
+}
+
+.portfolio-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-menu-item:not(:last-child) {
+    margin-right: 8px;
+}
+
 .portfolio-button {
+    display: inline-block;
+    min-width: 67px;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.62;
     color: #212121;
     background-color: #f5f4fa;
-    border: none;
+    padding: 6px 22px;
+    border: 0.5px solid transparent;
 }
 
 .portfolio-button:hover,
@@ -315,19 +332,40 @@ img {
 
 /* Примеры работ */
 
-.examples-subtitle {
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    gap: 30px;
+}
+
+.portfolio-list a {
+    flex-basis: calc((100% - 60px) / 3);
+}
+
+/* 
+.portfolio-list a:not(:nth-last-child(-n+3)) {
+    margin-bottom: 30px;
+} */
+
+.portfolio-img {
+    margin-bottom: 20px;
+}
+
+.portfolio-subtitle {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    margin-bottom: 4px;
 }
 
-.examples-description {
-    display: none;
+.portfolio-description {
     font-size: 18px;
     line-height: 1.55;
+    display: none;
 }
 
-.examples-category {
+.portfolio-category {
     font-size: 16px;
     line-height: 1.87;
     color: var(--secondary-text-color);
